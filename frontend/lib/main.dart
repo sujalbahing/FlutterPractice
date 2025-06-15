@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/widgets/navbar_widget.dart';
+import 'package:frontend/views/widget_tree.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,10 +24,7 @@ class _MyAppState extends State<MyApp> {
           brightness: Brightness.dark,
         ),
       ),
-      home: Scaffold(
-        appBar: AppBar(title: Text("Flutter Practice")),
-        bottomNavigationBar: NavbarWidget(),
-      ),
+      home: WidgetTree()
     );
   }
 }
