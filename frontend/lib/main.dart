@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/widgets/navbar_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int selectedIndex = 0;
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,18 +26,7 @@ class _MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         appBar: AppBar(title: Text("Flutter Practice")),
-        bottomNavigationBar: NavigationBar(
-          destinations: [
-            NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-            NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
-          ],
-          onDestinationSelected: (int value) {
-            setState(() {
-              selectedIndex = value;
-            });
-          },
-          selectedIndex: selectedIndex,
-        ),
+        bottomNavigationBar: NavbarWidget(),
       ),
     );
   }
