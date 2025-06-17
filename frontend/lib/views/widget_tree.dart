@@ -17,10 +17,10 @@ class WidgetTree extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              isDarkModeNotifier.value = !isDarkModeNotifier.value;
+              isLightModeNotifier.value = !isLightModeNotifier.value;
             },
             icon: ValueListenableBuilder(
-              valueListenable: isDarkModeNotifier,
+              valueListenable: isLightModeNotifier,
               builder: (context, isDarkMode, child) {
                 return Icon(
                   isDarkMode ? Icons.dark_mode : Icons.light_mode

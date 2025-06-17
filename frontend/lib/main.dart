@@ -17,14 +17,14 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
-      valueListenable: isDarkModeNotifier,
-      builder: (context, isDarkMode, child) {
+      valueListenable: isLightModeNotifier,
+      builder: (context, isLightMode, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(
               seedColor: Colors.teal,
-              brightness: isDarkMode? Brightness.dark : Brightness.light,
+              brightness: isLightMode? Brightness.dark : Brightness.light,
             ),
           ),
           home: WidgetTree(),
