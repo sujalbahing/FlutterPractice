@@ -17,13 +17,13 @@ class WidgetTree extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              isLightModeNotifier.value = !isLightModeNotifier.value;
+              isDarkModeNotifier.value = !isDarkModeNotifier.value;
             },
             icon: ValueListenableBuilder(
-              valueListenable: isLightModeNotifier,
+              valueListenable: isDarkModeNotifier,
               builder: (context, isDarkMode, child) {
                 return Icon(
-                  isDarkMode ? Icons.dark_mode : Icons.light_mode
+                  isDarkMode ? Icons.light_mode : Icons.dark_mode
                 );
               },
             ),
